@@ -1,0 +1,31 @@
+.editorial__slider {
+  position: relative;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  color: hsl(var(--base));
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Left arrow */
+.slick-prev {
+  left: -9px; 
+}
+
+/* Right arrow */
+.slick-next {
+  right: -9px;
+}

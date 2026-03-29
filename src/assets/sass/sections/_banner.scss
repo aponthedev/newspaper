@@ -1,60 +1,267 @@
-/* ========================= Banner CSS Start ========================= */
+/* ======================  Banner Section Start  ======================*/
 
-.banner {
-  position: relative;
-  z-index: 1;
-  padding: 180px 0 180px;
 
-  @include lg-screen {
-    padding: 230px 0 140px;
+.banner-left__content-top__title{
+    font-size: 19px;
+    font-weight: 700;
+    color: hsl(Var(--black));
+
+    &:hover{
+      color: hsl(var(--base)) !important;
+    }
+    
+    
+}
+
+.banner__right__add{
+  margin-bottom: 20px;
+}
+
+.banner__left__item{
+
+border-bottom: 1px solid hsl(Var(--black) / 0.2);
+padding-bottom: 10px;
+margin-bottom: 10px;
+
+&:hover{
+  .banner-left__content-top__image img{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;}
+}
+}
+
+.banner-left__content-top{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.banner-left__content-top__image{
+  height: 80px;
+  width: 80px;
+  overflow: hidden;
+  flex-shrink: 0;
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
+}
 
-  @include md-screen {
-    padding: 160px 0 100px;
-  }
+.banner__left__desc{
+  font-size: 14px;
+  margin-bottom: 14px;
+}
 
-  @include msm-screen {
-    padding: 115px 0 60px;
-  }
+.banner__left__time{
+  font-size: 12px;
+  color: hsl(Var(--gray));
+}
 
-  &::before {
-    position: absolute;
-    content: "";
+.banner__center{
+  padding: 0 18px;
+  border-left: 1px solid hsl(var(--black) / 0.15);
+  border-right: 1px solid hsl(var(--black) / 0.15);
+}
+
+.banner-feature{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 16px;
+  border-bottom: 1px solid hsl(var(--black) / 0.15);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.banner-feature__thumb{
+  display: block;
+  border: 1px solid hsl(var(--black) / 0.1);
+  img{
     width: 100%;
     height: 100%;
-    left: 0;
-    top: 0;
-    background: linear-gradient(to right, #01001e, #07065c73 60.71%);
-    z-index: -1;
-
-    @include md-screen {
-      background: linear-gradient(to right, transparentize(#030239, .2), transparentize(#030239, .2) 60.71%);
-    }
+    min-height: 180px;
+    object-fit: cover;
   }
+}
 
-  &.bg-img {
-    @include md-screen {
-      background-position: center right;
-      object-fit: contain;
-    }
-  }
-
-  &-content {
-    &__title {
-      color: hsl(var(--white));
-    }
-
-    &__desc {
-      max-width: 600px;
-      color: hsl(var(--white) / .8);
-    }
-
-    &__button {
-      margin-top: 30px;
+.banner-feature__title{
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: hsl(var(--black));
+  a{
+    color: inherit;
+    &:hover{
+      color: hsl(var(--base));
     }
   }
 }
 
+.banner-feature__text{
+  font-size: 14px;
+  color: hsl(var(--gray));
+  margin-bottom: 8px;
+}
 
+.banner-feature__time{
+  font-size: 12px;
+  color: hsl(var(--gray));
+}
 
-/* ========================= Banner CSS End =========================== */
+.banner-center__row{
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid hsl(var(--black) / 0.12);
+}
+
+.banner-center__row--two{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.banner-compact{
+  display: flex;
+  gap: 10px;
+  padding-right: 14px;
+  border-right: 1px solid hsl(var(--black) / 0.12);
+
+  &:last-child{
+    padding-right: 0;
+    border-right: 0;
+  }
+}
+
+.banner-compact__title{
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  a{
+    color: hsl(var(--black));
+    &:hover{
+      color: hsl(var(--base));
+    }
+  }
+}
+
+.banner-compact__tag{
+  color: hsl(var(--base));
+  font-weight: 700;
+}
+
+.banner-compact__text{
+  font-size: 13px;
+  color: hsl(var(--gray));
+  margin-bottom: 6px;
+}
+
+.banner-compact__time{
+  font-size: 12px;
+  color: hsl(var(--gray));
+}
+
+.banner-compact__thumb{
+  width: 80px;
+  height: 60px;
+  flex-shrink: 0;
+  border: 1px solid hsl(var(--black) / 0.1);
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.banner-center__row--three{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.banner-tile{
+  padding-right: 14px;
+  border-right: 1px solid hsl(var(--black) / 0.12);
+
+  &:last-child{
+    padding-right: 0;
+    border-right: 0;
+  }
+}
+
+.banner-tile__thumb{
+  display: block;
+  border: 1px solid hsl(var(--black) / 0.1);
+  margin-bottom: 8px;
+  img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+}
+
+.banner-tile__title{
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  a{
+    color: hsl(var(--black));
+    &:hover{
+      color: hsl(var(--base));
+    }
+  }
+}
+
+.banner-tile__tag{
+  color: hsl(var(--base));
+  font-weight: 700;
+}
+
+.banner-tile__time{
+  font-size: 12px;
+  color: hsl(var(--gray));
+}
+
+.banner-center__row--text{
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.banner-note{
+  padding-right: 14px;
+  border-right: 1px solid hsl(var(--black) / 0.12);
+
+  &:last-child{
+    padding-right: 0;
+    border-right: 0;
+  }
+}
+
+.banner-note__title{
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  a{
+    color: hsl(var(--black));
+    &:hover{
+      color: hsl(var(--base));
+    }
+  }
+}
+
+.banner-note__tag{
+  color: hsl(var(--base));
+  font-weight: 700;
+}
+
+.banner-note__text{
+  font-size: 13px;
+  color: hsl(var(--gray));
+  margin-bottom: 6px;
+}
+
+.banner-note__time{
+  font-size: 12px;
+  color: hsl(var(--gray));
+}
+/* ======================  Banner Section End  ======================*/

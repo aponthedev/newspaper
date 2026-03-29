@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /* ========================= CSS Variables Start ========================= */
 :root {
   /* Font Family */
-  --heading-font:  "Outfit", sans-serif;
+  --heading-font:  "Playfair Display", serif;
   --body-font: "Inter", sans-serif;
   /* Base Color (#842BE2) */
   @include colorVariable(--base, #D60000, 9);

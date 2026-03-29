@@ -1,0 +1,73 @@
+.top-stories__tab{
+border-bottom:1px solid hsl(var(--black) / .08);
+@include lg-screen {
+margin-bottom: 40px;
+}
+
+.nav-item {
+border-bottom: 0;
+padding: 5px;
+.nav-link {
+color: hsl(var(--base));
+padding: 8px 25px;
+background-color: transparent !important;
+transition: .4s;
+border-radius: 0;
+@include lg-screen {
+padding: 12px 15px;
+}
+
+&.active {
+color: hsl(var(--base));
+border-bottom: 1px solid hsl(var(--base))!important;
+&:hover {
+color: hsl(var(--base));
+}
+}
+
+&:hover {
+color: hsl(var(--base));
+}
+}
+}
+}
+
+
+
+.top-stories{
+    &__item{
+       
+        border-bottom: 1px solid hsl(var(--black) / 0.2);
+        padding-bottom: 16px;
+        // margin-bottom: 10px;
+        &__title{
+            font-size: 50px;
+            font-weight: 600;                
+                       color: hsl(var(--base));
+           
+            margin-bottom: 16px;
+          
+            
+        }
+        &__desc{
+            font-size: 20px;
+            color: hsl(var(--black) / .8);
+        }
+    }
+}
+
+.top-stories__center{
+    &__thumb{
+        margin-bottom: 16px;
+    }
+    &__title{
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    &__date{
+        font-size: 14px;
+        color: hsl(var(--black) / .8);
+    }
+}

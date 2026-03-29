@@ -20,115 +20,7 @@
         });
         /* ==================== Header Navbar Collapse JS End ======================= */
 
-        /* ==================== Header Nav Scroll (8 Items) JS Start ===================== */
-        function initHeaderNavScroll() {
-            // 1) Find the nav scroll wrapper (if not found, just exit)
-            const $wraps = $('.nav-scroll');
-            if (!$wraps.length) return;
-
-            $wraps.each(function () {
-                // 2) Cache the important elements
-                const $wrap = $(this);
-                const $track = $wrap.find('.nav-scroll__track');
-                const $menu = $wrap.find('.nav-menu');
-                const $items = $menu.find('.nav-item');
-                const $btnPrev = $wrap.find('.nav-scroll__btn--left');
-                const $btnNext = $wrap.find('.nav-scroll__btn--right');
-
-                // 3) We want exactly 7 items visible on desktop
-                const visibleCount = 7;
-
-                // 4) Helper to detect desktop only (we do nothing on mobile)
-                const isDesktop = () => window.matchMedia('(min-width: 992px)').matches;
-
-                // 5) Set each item width so 7 items + gap fit inside the track
-                const setItemWidth = () => {
-                    if (!isDesktop()) {
-                        $items.css('flex', '');
-                        $btnPrev.addClass('is-hidden');
-                        $btnNext.addClass('is-hidden');
-                        return;
-                    }
-
-                    const trackWidth = $track[0].clientWidth;
-                    if (!trackWidth) return;
-
-                    const menuStyle = window.getComputedStyle($menu[0]);
-                    const gapValue = parseFloat(menuStyle.columnGap || menuStyle.gap || 0);
-                    const totalGap = gapValue * (visibleCount - 1);
-                    const itemWidth = Math.floor((trackWidth - totalGap) / visibleCount);
-                    $items.css('flex', `0 0 ${itemWidth}px`);
-                };
-
-                // 6) Show the arrow only when there is more content to the right
-                const updateButton = () => {
-                    if (!isDesktop()) return;
-
-                    const el = $track[0];
-                    const canScroll = el.scrollWidth > el.clientWidth + 2;
-                    const atStart = el.scrollLeft <= 2;
-                    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 2;
-
-                    if (canScroll && !atStart) {
-                        $btnPrev.removeClass('is-hidden');
-                    } else {
-                        $btnPrev.addClass('is-hidden');
-                    }
-
-                    if (canScroll && !atEnd) {
-                        $btnNext.removeClass('is-hidden');
-                    } else {
-                        $btnNext.addClass('is-hidden');
-                    }
-                };
-
-                // 7) Scroll by one item width on each click
-                const scrollNext = () => {
-                    const el = $track[0];
-                    const firstItem = $items[0];
-                    const menuStyle = window.getComputedStyle($menu[0]);
-                    const gapValue = parseFloat(menuStyle.columnGap || menuStyle.gap || 0);
-                    const step = firstItem ? firstItem.getBoundingClientRect().width + gapValue : 120;
-
-                    el.scrollBy({ left: step, behavior: 'smooth' });
-                };
-
-                const scrollPrev = () => {
-                    const el = $track[0];
-                    const firstItem = $items[0];
-                    const menuStyle = window.getComputedStyle($menu[0]);
-                    const gapValue = parseFloat(menuStyle.columnGap || menuStyle.gap || 0);
-                    const step = firstItem ? firstItem.getBoundingClientRect().width + gapValue : 120;
-
-                    el.scrollBy({ left: -step, behavior: 'smooth' });
-                };
-
-                // 8) Small helper to re-check after layout/Font load
-                const refresh = () => {
-                    setItemWidth();
-                    updateButton();
-                };
-
-                // 9) Bind events
-                $btnNext.on('click', scrollNext);
-                $btnPrev.on('click', scrollPrev);
-                $track.on('scroll', updateButton);
-                $(window).on('resize', function () {
-                    refresh();
-                });
-                $(window).on('load', function () {
-                    // After fonts/images load, widths can change
-                    refresh();
-                });
-
-                // 10) Initial run (also re-check after a tiny delay)
-                refresh();
-                setTimeout(refresh, 100);
-            });
-        }
-
-        initHeaderNavScroll();
-        /* ==================== Header Nav Scroll (8 Items) JS End ======================= */
+       
 
         /* ==================== Offcanvas Sidebar JS Start ======================== */
         $('[data-toggle="offcanvas-sidebar"]').each(function (index, toggler) {
@@ -172,6 +64,55 @@
             }
         });
         /* ==================== Offcanvas Sidebar JS End ========================== */
+
+        // editorial__ start
+$('.editorial__slider').slick({
+  dots: false, // ❌ remove pagination
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+
+  prevArrow: `<button class="slick-prev custom-arrow">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 33 32" fill="none">
+  <g stroke="currentColor" stroke-width="2.5" fill="none">
+    <circle cx="16.913" cy="16" r="14.498"></circle>
+    <path d="M22.212 16h-13M14.277 11.136 9.413 16l4.864 4.864"></path>
+  </g>
+</svg>
+  </button>`,
+
+  nextArrow: `<button class="slick-next custom-arrow">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 33 32" style="enable-background:new 0 0 512 512" xml:space="preserve" fill-rule="evenodd" class=""><g><g fill="none"><path d="M.913 0h32v32h-32z" fill="" opacity="1"></path><g stroke="currentColor" stroke-width="2.5"><circle cx="16.913" cy="16" r="14.498" fill="" opacity="1"></circle><path d="M9.614 16h13M18.549 20.864 23.413 16l-4.864-4.864" fill="" opacity="1"></path></g></g></g></svg>
+  </button>`,
+
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true
+        
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+        // editorial__ ends
 
         /*===================== Dynamically Add Active Class JS Start ============================== */
         function dynamicActiveMenuClass(selector) {
