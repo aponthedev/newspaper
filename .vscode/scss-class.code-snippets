@@ -1,0 +1,50 @@
+{
+  "border": {
+    "prefix": "border",
+    "scope": "scss",
+    "body": [
+      "border: ${1:1}px solid hsl(var(--${2|border-color,base,black|}));",
+      "${0}"
+    ],
+    "description": "border 1px solid color"
+  },
+
+  "border-bottom": {
+    "prefix": "bb",
+    "scope": "scss",
+    "body": [
+      "border-bottom: ${1:1}px solid hsl(var(--${2|base,black|}));",
+      "$0"
+    ],
+    "description": "border-bottom: 1px solid hsl(var(--base))"
+  },
+  "font-size": {
+    "prefix": "ff",
+    "scope": "scss",
+    "body": ["font-size: rem(${1});"],
+    "description": "font-size on rem"
+  },
+
+  "Scss Page Start": {
+    "prefix": "start",
+    "scope": "scss",
+    "body": [
+      "/* ======================  ${1:${TM_FILENAME_BASE/^_(.)/${1:/capitalize}/}} Section Start  ======================*/",
+      ".${2:${TM_FILENAME_BASE/^_(.)/${1:/downcase}/}}{",
+      "${0}",
+      "}",
+      "/* ======================  ${1} Section End  ======================*/"
+    ],
+    "description": "Creates a section with container and row"
+  },
+  "Scss Comment Start": {
+    "prefix": "comment",
+    "scope": "scss",
+    "body": [
+      "/* ======================  ${1:${TM_FILENAME_BASE/^_(.)/${1:/capitalize}/}} Start  ======================*/",
+      "${0}",
+      "/* ======================  ${1} End  ======================*/"
+    ],
+    "description": "Scss Comment Start and End"
+  }
+}

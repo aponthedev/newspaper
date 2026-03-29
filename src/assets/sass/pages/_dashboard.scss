@@ -1,0 +1,264 @@
+/* ========================= Dashboard CSS Start ========================= */
+.dashboard {
+  position: relative;
+  display: flex;
+  background-color: hsl(var(--gray-l-500));
+
+  &-sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: hsl(var(--white));
+    transition: 0.2s linear;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
+
+    @include lg-screen {
+      width: 250px;
+    }
+
+    @include md-screen {
+      width: 280px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1050;
+      transform: translateX(-100%);
+      transition: transform .3s linear;
+
+      &.show {
+        transform: none !important;
+      }
+    }
+
+    &__header {
+      padding: 24px 16px 12px 16px;
+      position: relative;
+    }
+
+    &__body {
+      flex: 1 1 auto;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: hsl(var(--black)/0.05) hsl(var(--black)/0.1);
+      padding: 12px 16px 24px 16px;
+      border-top: 1px solid transparent;
+
+      &.scrolling {
+        border-top-color: hsl(var(--border-color));
+      }
+    }
+
+    &-toggle {
+      --size: 32px !important;
+      font-size: calc(var(--size) * 0.6);
+    }
+
+    &-logo {
+      img {
+        max-width: 170px;
+        max-height: 60px;
+
+        @include lg-screen {
+          max-width: 150px;
+        }
+
+        @include md-screen {
+          max-width: 130px;
+        }
+      }
+    }
+
+    &-menu {
+      &__item {
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+
+        &.logout {
+          &>a {
+            color: hsl(var(--danger));
+          }
+        }
+
+        &.active {
+          &>a {
+            color: hsl(var(--white));
+            background-color: hsl(var(--base));
+          }
+        }
+      }
+
+      &__link {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 12px;
+        gap: 8px;
+        padding: 16px 16px 16px 32px;
+        font-size: rem(18px);
+        font-weight: 500;
+        line-height: 100%;
+        color: hsl(var(--gray));
+
+        &[data-bs-toggle="collapse"]::after {
+          content: '\f107';
+          font-family: 'Line Awesome Free';
+          font-weight: 900;
+          margin-left: auto;
+        }
+
+        &[aria-expanded="true"]::after {
+          content: '\f106';
+        }
+
+        span {
+          @include line-clamp(1);
+        }
+
+        svg {
+          flex-shrink: 0;
+        }
+
+        @include lg-screen {
+          padding: 16px 16px 16px 16px;
+        }
+
+        @include msm-screen {
+          font-size: rem(16px);
+          padding: 12px 12px 12px 16px;
+
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          color: hsl(var(--black));
+          background-color: hsl(var(--black)/0.05);
+        }
+      }
+    }
+
+    &-submenu {
+      padding: 5px 0;
+
+      &__item {
+        margin-bottom: 6px;
+
+        &.active {
+          >a {
+            font-weight: 500;
+            color: hsl(var(--base));
+
+            &::before {
+              border-color: hsl(var(--base));
+            }
+          }
+        }
+      }
+
+      &__link {
+        --circle-size: 10px;
+        width: 100%;
+        color: hsl(var(--gray));
+        font-weight: 500;
+        font-size: rem(16px);
+        padding: 6px 6px 6px calc(var(--circle-size) + 32px);
+        transition: .3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        @include lg-screen {
+          padding: 6px 6px 6px calc(var(--circle-size) + 16px);
+        }
+
+        @include msm-screen {
+          font-size: rem(14px);
+        }
+
+        &::before {
+          content: '';
+          width: var(--circle-size);
+          height: var(--circle-size);
+          display: inline-block;
+          background-color: transparent;
+          border: 1px solid hsl(var(--black) / 0.4);
+          border-radius: 50%;
+          transition: .3s ease;
+          flex-shrink: 0;
+        }
+
+        &:hover,
+        &:focus {
+          color: hsl(var(--black));
+
+          &::before {
+            border-color: hsl(var(--black));
+          }
+        }
+      }
+    }
+
+    .btn--close {
+      --size: 40px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 12px;
+    }
+  }
+
+  &-content {
+    flex-grow: 1;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 32px;
+    background-color: hsl(var(--white));
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    @include lg-screen {
+      padding: 16px 24px;
+    }
+
+    @include sm-screen {
+      padding: 16px;
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  &-body {
+    min-height: 100vh;
+    position: relative;
+    padding: 32px;
+
+    @include lg-screen {
+      padding: 24px;
+    }
+
+    @include sm-screen {
+      padding: 16px;
+    }
+
+  }
+}
+
+/* ========================= Dashboard CSS End =========================== */

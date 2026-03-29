@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+/* ========================= CSS Variables Start ========================= */
+:root {
+  /* Font Family */
+  --heading-font:  "Outfit", sans-serif;
+  --body-font: "Inter", sans-serif;
+  /* Base Color (#842BE2) */
+  @include colorVariable(--base, #D60000, 9);
+
+  /* Base Two Color (#34d399) */
+  @include colorVariable(--base-two, #34d399, 9);
+
+  /* Primary Color (#3c83f6) */
+  @include colorVariable(--primary, #3c83f6, 9);
+
+  /* Secondary Color (#585b5e) */
+  @include colorVariable(--secondary, #585b5e, 9);
+
+  /* Success Color (#35C75A) */
+  @include colorVariable(--success, #35C75A, 9);
+
+  /* Danger Color (#EB4E3D) */
+  @include colorVariable(--danger, #EB4E3D, 9);
+
+  /* Warning Color (#FC0) */
+  @include colorVariable(--warning, #FC0, 9);
+
+  /* Info Color (#0ea5e9) */
+  @include colorVariable(--info, #0ea5e9, 9);
+
+  /* Color Variables */
+  --white: 0 0% 100%; //#ffffff 
+  --black: 0 0% 0%; //#000000
+  --gray: 215 16% 47%; //#64748b
+  --gray-d-100: 215 19% 35%; //#475569
+  --gray-d-200: 215 25% 27%; //#334155
+  --gray-d-300: 217 33% 17%; //#1e293b
+  --gray-d-400: 222 47% 11%; //#0f172a
+  --gray-d-500: 229 84% 5%; //#020617
+  --gray-l-100: 215 20% 65%; //#94a3b8
+  --gray-l-200: 213 27% 84%; //#cbd5e1
+  --gray-l-300: 214 32% 91%; //#e2e8f0
+  --gray-l-400: 210 40% 96%; //#f1f5f9
+  --gray-l-500: 210 40% 98%; //#f8fafc
+  --body-bg: var(--white);
+  --section-bg: var(--gray-l-100);
+  --body-color: var(--gray);
+  --heading-color: var(--gray-d-500);
+  --border-color: var(--gray-l-300);
+  /* Shadow Variables */
+  --box-shadow: 0px 2px 15px hsl(var(--black) / 0.05);
+  /* Gradient Variable */
+  --gradient: linear-gradient(135deg, hsl(var(--base)) 0%, hsl(var(--base-two)) 100%);
+  --gradient-l-100: linear-gradient(135deg, hsl(var(--base)/0.15) 0%, hsl(var(--base-two)/0.15) 100%);
+}
+
+/* ========================= CSS Variables End ========================= */

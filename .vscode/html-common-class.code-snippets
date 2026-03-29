@@ -1,0 +1,38 @@
+{
+  "Position Extend": {
+    "prefix": "pa-extend",
+    "scope": "html, php",
+    "body": ["pa-extend"],
+    "description": "position: absolute;\ncontent: '';"
+  },
+  "Top Center Extend": {
+    "prefix": "top-center-extend",
+    "scope": "html, php",
+    "body": ["top-center-extend"],
+    "description": "top: 50%;\ntransform: translateY(-50%);"
+  },
+  "Left Center Extend": {
+    "prefix": "left-center-extend",
+    "scope": "html, php",
+    "body": ["left-center-extend"],
+    "description": "left: 50%;\ntransform: translateX(-50%);"
+  },
+  "Top Left Center Extend": {
+    "prefix": "top-left-center-extend",
+    "scope": "html, php",
+    "body": ["top-left-center-extend"],
+    "description": "top: 50%;\nleft: 50%;\ntransform: translate(-50%, -50%);"
+  },
+  "Bg Image": {
+    "prefix": "bg-img",
+    "scope": "html, php",
+    "body": ["bg-img"],
+    "description": "background-size: cover !important;\nbackground-repeat: no-repeat;\nbackground-position: center center;\nwidth: 100%;\nheight: 100%;"
+  },
+  "input--group ": {
+    "prefix": "input--group ",
+    "scope": "html, php",
+    "body": ["bg-img"],
+    "description": "custom input--group"
+  }
+}

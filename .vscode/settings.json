@@ -1,0 +1,11 @@
+{
+  "cSpell.words": ["Coronrelife"],
+  "search.exclude": {
+    "../src/*.html": true,
+    "../src/assets/css/main.css": true,
+    "../src/assets/css/main.css.map": true
+  },
+  "files.exclude": {
+    "**/src/*.html": true
+  }
+}

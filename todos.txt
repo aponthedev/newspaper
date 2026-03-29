@@ -1,0 +1,3 @@
+1. Gradient Button add kora lagbe; [done]
+2. btn--close & btn--icon ek sathe add kore kaj korano lagbe;
+3. Font size classes add kora lagbe [done]

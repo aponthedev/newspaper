@@ -1,0 +1,94 @@
+@@include('../layout/_template-top.html')
+
+<main class="page-wrapper">
+    <section class="account">
+        <div class="account-thumb bg-img" data-background-image="assets/images/thumbs/account-thumb.png"></div>
+        <div class="account-content bg-img" data-background-image="assets/images/thumbs/account-content-overlay.png">
+            <div class="account-header">
+                <a class="account-logo" href="index.html">
+                    <img src="assets/images/logo/logo.png" alt="">
+                </a>
+                <div class="account-heading">
+                    <h2 class="account-heading__title">Join Us Now!</h2>
+                    <p class="account-heading__subtitle">Register to play, win, and claim rewards.</p>
+                </div>
+            </div>
+
+            <div class="account-body">
+                <div class="social-auth">
+                    <a class="social-auth__btn" href="#">
+                        <img src="assets/images/icons/google.png" alt="">
+                        <span>Login with Google</span>
+                    </a>
+                    <a class="social-auth__btn" href="#">
+                        <img src="assets/images/icons/facebook.png" alt="">
+                        <span>Login with Facebook</span>
+                    </a>
+                    <a class="social-auth__btn" href="#">
+                        <img src="assets/images/icons/linkedin.png" alt="">
+                        <span>Login with Linkedin</span>
+                    </a>
+                </div>
+
+                <div class="account-divider">
+                    <span>Or Register with</span>
+                </div>
+
+                <form class="account-form" action="">
+                    <div class="row gy-4">
+                        <div class="col-sm-6">
+                            <label class="form--label required" for="">First Name</label>
+                            <input class="form-control form--control" type="text" placeholder="First Name">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form--label required" for="">Last Name</label>
+                            <input class="form-control form--control" type="text" placeholder="Last Name">
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="form--label required" for="">Email Address</label>
+                            <input class="form-control form--control" type="text" placeholder="Email Address">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form--label required" for="">Password</label>
+                            <div class="input-group input--group input--group-password">
+                                <input class="form-control form--control" type="password" placeholder="Password">
+                                <span class="input-group-text input-group-btn">
+                                    <i class="far fa-eye-slash"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form--label required" for="">Confirm password</label>
+                            <div class="input-group input--group input--group-password">
+                                <input class="form-control form--control" type="password"
+                                    placeholder="Confirm password">
+                                <span class="input-group-text input-group-btn">
+                                    <i class="far fa-eye-slash"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form--check gradient">
+                                <input type="checkbox" id="agree" name="agree" class="form-check-input" required="">
+                                <label for="agree" class="form-check-label">
+                                    I agree with
+                                    <a href="#" class="fs-14 ms-1" target="_blank">Privacy Policy</a>
+                                    ,
+                                    <a href="#" class="fs-14 ms-1" target="_blank">Terms of Service</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-100 btn btn--base mt-4" type="submit">
+                        Register now
+                    </button>
+                </form>
+
+                <p class="account-info">Already have an account? <a href="login.html">Login now</a></p>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('../layout/_template-bottom.html')

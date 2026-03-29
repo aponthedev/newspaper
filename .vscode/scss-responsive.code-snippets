@@ -1,0 +1,68 @@
+{
+  "Mobile Landscape": {
+    "prefix": "@landscape",
+    "scope": "scss",
+    "body": ["@include landscape {", "${TM_SELECTED_TEXT}", "${0}", "}"],
+    "description": "@media all and (orientation: landscape)"
+  },
+  "Mobile Portrait": {
+    "prefix": "@portrait",
+    "scope": "scss",
+    "body": ["@include portrait {", "${TM_SELECTED_TEXT}", "${0}", "}"],
+    "description": "@media all and (orientation: portrait)"
+  },
+  "Extra Extra Small Screen": {
+    "prefix": "@xxsm-screen",
+    "scope": "scss",
+    "body": ["@include xxsm-screen {", "${TM_SELECTED_TEXT}", "${0}", "}"],
+    "description": "@media screen and (max-width: 374px)"
+  },
+  "Extra Small Screen": {
+    "prefix": "@xsm-screen",
+    "scope": "scss",
+    "body": ["@include xsm-screen {", "${TM_SELECTED_TEXT}", "${0}", "}"],
+    "description": "@media screen and (max-width: 424px)"
+  },
+  "Medium Small Screen": {
+    "prefix": "@msm-screen",
+    "scope": "scss",
+    "body": ["@include msm-screen {", "${TM_SELECTED_TEXT}", "${0}", "}"],
+    "description": "@media screen and (max-width: 575px)"
+  },
+  "Small Screen": {
+    "prefix": "@sm-screen",
+    "scope": "scss",
+    "body": ["@include sm-screen {", "${TM_SELECTED_TEXT}", "${0}", "}"],
+    "description": "@media screen and (max-width: 767px)"
+  },
+  "Large Screen": {
+    "prefix": "@md-screen",
+    "scope": "scss",
+    "body": ["@include md-screen {", "${TM_SELECTED_TEXT}", "${0}", "}"],
+    "description": "@media screen and (max-width: 991px)"
+  },
+  "Extra Large Screen": {
+    "prefix": "@lg-screen",
+    "scope": "scss",
+    "body": ["@include lg-screen {", "${TM_SELECTED_TEXT}", "${0}", "}"],
+    "description": "@media screen and (max-width: 1199px)"
+  },
+  "Extra Extra Large Screen": {
+    "prefix": "@xl-screen",
+    "scope": "scss",
+    "body": ["@include xl-screen {", "${TM_SELECTED_TEXT}", "${0}", "}"],
+    "description": "@media screen and (max-width: 1399px)"
+  },
+  "Extra Extra Extra Large Screen": {
+    "prefix": "@xxl-screen",
+    "scope": "scss",
+    "body": ["@include xxl-screen {", "${TM_SELECTED_TEXT}", "${0}", "}"],
+    "description": "@media screen and (max-width: 1499px)"
+  },
+  "Extra Extra Extra Extra Large Screen": {
+    "prefix": "@xxxl-screen",
+    "scope": "scss",
+    "body": ["@include xxxl-screen {", "${TM_SELECTED_TEXT}", "${0}", "}"],
+    "description": "@media screen and (max-width: 1599px)"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "First html Start": {
+    "prefix": "start",
+    "scope": "html",
+    "body": [
+      "<!--==========================  ${1:${TM_FILENAME_BASE/^_(.)/${1:/capitalize}/}} Section Start  ==========================-->",
+      "<section class=\"${2:${TM_FILENAME_BASE/^_(.)/${1:/downcase}/}}-section ${3}\">",
+      "  <div class=\"container\">",
+      "    <div class=\"row\">",
+      "        $0",
+      "    </div>",
+      "  </div>",
+      "</section>",
+      "<!--==========================  ${1} Section End  ==========================-->"
+    ],
+    "description": "Creates a section with container and row"
+  },
+
+  "Comment Create": {
+    "prefix": "comment",
+    "scope": "html",
+    "body": [
+      "<!--==========================   ${1:${TM_FILENAME_BASE/^_(.)/${1:/capitalize}/}} Start  ==========================-->",
+      "${0}",
+      "<!--==========================  ${1} End  ==========================-->"
+    ],
+    "description": "Html Comment Start And End"
+  },
+  "HTML Section title": {
+    "prefix": "section-heading",
+    "scope": "html",
+    "body": [
+      "<div class=\"row\">",
+      "    <div class=\"col-12\">",
+      "        <div class=\"section-heading\">",
+      "            <h2 class=\"section-heading__title\">${1}</h2>",
+      "            <p class=\"section-heading__desc\">${2}</p>",
+      "        </div>",
+      "    </div>",
+      "</div>"
+    ],
+    "description": "Html Comment Start And End"
+  }
+}

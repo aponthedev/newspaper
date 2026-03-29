@@ -1,0 +1,27 @@
+{
+  "rem-converter": {
+    "prefix": "rem",
+    "scope": "scss",
+    "body": ["rem(${1:${TM_SELECTED_TEXT}})${2}"],
+    "description": "Rem Function"
+  },
+
+  "hsl-var": {
+    "prefix": "hsl",
+    "scope": "scss",
+    "body": ["hsl(var(--${1|base,black,white,base-tow|}))"],
+    "description": "make hsl valu to var"
+  },
+  "hsla-var": {
+    "prefix": "hsla",
+    "scope": "scss",
+    "body": ["hsl(var(--${1|base,black,white,base-tow|})/ 0.${2})"],
+    "description": "make hsla valu to var"
+  },
+  "CSS calculation": {
+    "prefix": "calc()",
+    "scope": "scss",
+    "body": ["calc(100% - $1)"],
+    "description": "Calculation shortcutes for the css calculation function"
+  }
+}

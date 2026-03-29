@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title -->
+  <title> Html Template</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Fontasosome -->
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <!-- Slick -->
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <!-- line awesome -->
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="assets/css/select2.min.css">
+  <!-- Main css -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <!--==================== Preloader Start ====================-->
+<div class="preloader">
+    <div class="loader-p"></div>
+</div>
+<!--==================== Preloader End ====================-->
+  <!--==================== Body Overlay Start ====================-->
+  <div class="body-overlay"></div>
+  <!--==================== Body Overlay End ====================-->
+
+  <!--==================== Sidebar Overlay End ====================-->
+  <div class="sidebar-overlay"></div>
+  <!--==================== Sidebar Overlay End ====================-->
+
+  <!--==================== Scroll To Top Start ====================-->
+  <button class="scroll-top" type="button">
+    <svg class="scroll-top-progress" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98">
+      </path>
+    </svg>
+  </button>
+  <!--==================== Scroll to Top End ====================-->
+
+<!-- ==================== Dashboard Start ==================== -->
+<div class="dashboard">
+    <aside class="dashboard-sidebar" id="dashboard-sidebar">
+    <div class="dashboard-sidebar__header">
+        <a href="index.html" class="dashboard-sidebar-logo">
+            <img src="assets/images/logo/logo.png" alt="">
+        </a>
+        <button class="btn-close btn--close d-lg-none" type="button"></button>
+    </div>
+    <div class="dashboard-sidebar__body">
+        <ul class="dashboard-sidebar-menu">
+            <li class="dashboard-sidebar-menu__item">
+                <a class="dashboard-sidebar-menu__link" href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li class="dashboard-sidebar-menu__item">
+                <a class="dashboard-sidebar-menu__link" href="#">
+                    <i class="fas fa-building-columns"></i>
+                    <span class="text">Deposit</span>
+                </a>
+            </li>
+            <li class="dashboard-sidebar-menu__item">
+                <a class="dashboard-sidebar-menu__link" data-bs-toggle="collapse" href="#dashboard-collapse-1"
+                    role="button" aria-expanded="false" aria-controls="dashboard-collapse-1">
+                    <i class="fas fa-money-bill-transfer"></i>
+                    <span class="text">Withdraw</span>
+                </a>
+                <div class="dashboard-collapse collapse" id="dashboard-collapse-1">
+                    <ul class="dashboard-sidebar-submenu">
+                        <li class="dashboard-sidebar-submenu__item">
+                            <a href="#" class="dashboard-sidebar-submenu__link">
+                                <span class="text">Withdraw Now</span>
+                            </a>
+                        </li>
+                        <li class="dashboard-sidebar-submenu__item">
+                            <a href="#" class="dashboard-sidebar-submenu__link">
+                                <span class="text">Withdraw Log</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dashboard-sidebar-menu__item">
+                <a class="dashboard-sidebar-menu__link" href="#">
+                    <i class="fas fa-clock-rotate-left"></i>
+                    <span class="text">Transection History</span>
+                </a>
+            </li>
+            <li class="dashboard-sidebar-menu__item">
+                <a class="dashboard-sidebar-menu__link" data-bs-toggle="collapse" href="#dashboard-collapse-2"
+                    role="button" aria-expanded="false" aria-controls="dashboard-collapse-2">
+                    <i class="fas fa-cog"></i>
+                    <span class="text">Settings</span>
+                </a>
+                <div class="dashboard-collapse collapse" id="dashboard-collapse-2">
+                    <ul class="dashboard-sidebar-submenu">
+                        <li class="dashboard-sidebar-submenu__item">
+                            <a class="dashboard-sidebar-submenu__link" href="profile.html">
+                                <span class="text">Profile</span>
+                            </a>
+                        </li>
+                        <li class="dashboard-sidebar-submenu__item">
+                            <a class="dashboard-sidebar-submenu__link" href="#">
+                                <span class="text">Change Password</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dashboard-sidebar-menu__item">
+                <a class="dashboard-sidebar-menu__link" href="#">
+                    <i class="fas fa-ticket"></i>
+                    <span class="text">Support</span>
+                </a>
+            </li>
+            <li class="dashboard-sidebar-menu__item">
+                <a href="#" class="dashboard-sidebar-menu__link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="text">Log Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>
+    <div class="dashboard-content">
+        <div class="dashboard-header">
+    <div class="dashboard-header__left">
+        <button class="dashboard-sidebar-toggle btn btn--icon btn--sm btn-soft--secondary d-lg-none" type="button"
+            data-toggle="offcanvas-sidebar" data-target="#dashboard-sidebar">
+            <i class="las la-bars"></i>
+        </button>
+    </div>
+    <div class="dashboard-header__right">
+        <div class="dropdown dropdown--notification">
+            <button class="btn btn--icon btn-soft--base dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M2.52992 14.394C2.31727 15.7471 3.268 16.6862 4.43205 17.1542C8.89481 18.9486 15.1052 18.9486 19.5679 17.1542C20.732 16.6862 21.6827 15.7471 21.4701 14.394C21.3394 13.5625 20.6932 12.8701 20.2144 12.194C19.5873 11.2975 19.525 10.3197 19.5249 9.27941C19.5249 5.2591 16.1559 2 12 2C7.84413 2 4.47513 5.2591 4.47513 9.27941C4.47503 10.3197 4.41272 11.2975 3.78561 12.194C3.30684 12.8701 2.66061 13.5625 2.52992 14.394Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9 21C9.79613 21.6219 10.8475 22 12 22C13.1525 22 14.2039 21.6219 15 21"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="badge badge--danger">9+</span>
+            </button>
+            <div class="dropdown-menu">
+                <div class="dropdown-menu__header">
+                    <h6 class="dropdown-menu__title">Notifications</h6>
+                </div>
+                <div class="dropdown-menu__body">
+                    
+                    <a class="dropdown-item unread" href="#">
+                        <h6 class="dropdown-item__title">Your BTC purchase is confirmed.</h6>
+                        <span class="dropdown-item__date">24/12/2024 7:40 PM</span>
+                    </a>
+                    <a class="dropdown-item unread" href="#">
+                        <h6 class="dropdown-item__title">Please enable 2FA authentication to secure.
+                        </h6>
+                        <span class="dropdown-item__date">24/12/2024 7:40 PM</span>
+                    </a>
+                    <a class="dropdown-item unread" href="#">
+                        <h6 class="dropdown-item__title">Refer a friend and earn $10 bonus!</h6>
+                        <span class="dropdown-item__date">24/12/2024 7:40 PM</span>
+                    </a>
+                    <a class="dropdown-item unread" href="#">
+                        <h6 class="dropdown-item__title">New feature: Instant buy is now live!</h6>
+                        <span class="dropdown-item__date">24/12/2024 7:40 PM</span>
+                    </a>
+                    
+                    <a class="dropdown-item unread" href="#">
+                        <h6 class="dropdown-item__title">Your BTC purchase is confirmed.</h6>
+                        <span class="dropdown-item__date">24/12/2024 7:40 PM</span>
+                    </a>
+                    <a class="dropdown-item unread" href="#">
+                        <h6 class="dropdown-item__title">Please enable 2FA authentication to secure.
+                        </h6>
+                        <span class="dropdown-item__date">24/12/2024 7:40 PM</span>
+                    </a>
+                    <a class="dropdown-item unread" href="#">
+                        <h6 class="dropdown-item__title">Refer a friend and earn $10 bonus!</h6>
+                        <span class="dropdown-item__date">24/12/2024 7:40 PM</span>
+                    </a>
+                    <a class="dropdown-item unread" href="#">
+                        <h6 class="dropdown-item__title">New feature: Instant buy is now live!</h6>
+                        <span class="dropdown-item__date">24/12/2024 7:40 PM</span>
+                    </a>
+                    
+                </div>
+                <div class="dropdown-menu__footer">
+                    <a class="dropdown-menu__view-all" href="#">
+                        View All Notifications
+                        <i class="las la-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown dropdown--user">
+            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="dropdown-toggle__thumb" src="assets/images/thumbs/user-profile.png" alt="">
+                <div class="dropdown-toggle__content">
+                    <div class="dropdown-info">
+                        <p class="dropdown-info__title">John Doe</p>
+                        <span class="dropdown-info__subtitle">johndoe@mail.com</span>
+                    </div>
+                </div>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                <div class="dropdown-menu__header">
+                    <div class="dropdown-info">
+                        <p class="dropdown-info__title">John Doe</p>
+                        <span class="dropdown-info__subtitle">johndoe@mail.com</span>
+                    </div>
+                </div>
+                <div class="dropdown-menu__body">
+                    <a class="dropdown-item" href="dashboard.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-layout-dashboard">
+                            <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+                            <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+                            <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+                            <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+                        </svg>
+                        <span>Dashboard</span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-user-pen">
+                            <path d="M11.5 15H7a4 4 0 0 0-4 4v2"></path>
+                            <path
+                                d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z">
+                            </path>
+                            <circle cx="10" cy="7" r="4"></circle>
+                        </svg>
+                        <span>Edit Profile</span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-lock">
+                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <span>Change Password</span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-scan-barcode">
+                            <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                            <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                            <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                            <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                            <path d="M8 7v10"></path>
+                            <path d="M12 7v10"></path>
+                            <path d="M17 7v10"></path>
+                        </svg>
+                        <span>2FA Security</span>
+                    </a>
+                    <a class="dropdown-item logout" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-log-out">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" x2="9" y1="12" y2="12"></line>
+                        </svg>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="dashboard-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur atque soluta ipsam voluptatibus
+                inventore iure? Nostrum laboriosam commodi officiis cupiditate iure, eveniet facere modi nemo ratione
+                consectetur quod delectus, voluptate saepe iste labore accusamus! Facilis quae, sunt cum veritatis
+                tempore deserunt rem est, laborum cumque impedit consequatur, minima consectetur corporis corrupti
+                officiis animi voluptatem! Tenetur nobis consequatur facilis cupiditate molestiae, nihil voluptas
+                officiis sunt nisi vel quam laborum quas reprehenderit quo? Officiis enim maxime doloribus assumenda,
+                repellat tenetur minus quo sit reiciendis. Quod laborum maiores quaerat ipsam deserunt vitae voluptas
+                aperiam corrupti itaque. Voluptas voluptates eligendi nam illum dolor quo voluptatum cupiditate corporis
+                exercitationem quibusdam ratione accusamus sunt iure, facere, corrupti impedit neque blanditiis
+                distinctio quod inventore placeat minus praesentium molestiae cumque. Magni rerum dolorum eaque commodi
+                tempore aspernatur voluptates quas, dolore corporis deserunt praesentium sapiente fugit obcaecati natus,
+                eum ab sunt dolorem impedit cumque beatae molestias quae quaerat reiciendis debitis! Dolorum, laudantium
+                voluptatum itaque numquam delectus quaerat molestiae sit pariatur soluta perspiciatis corrupti atque
+                temporibus laboriosam natus laborum libero beatae hic fugiat deserunt inventore. Ab perferendis ipsum
+                sapiente exercitationem nulla. Minima assumenda aperiam quas maiores expedita iure praesentium possimus
+                nisi voluptatem sapiente animi, veniam deserunt provident itaque illo perferendis porro dicta molestias.
+                Error facilis sequi asperiores libero nam quae eius magnam aspernatur eligendi, suscipit quaerat
+                quisquam nesciunt distinctio officiis necessitatibus recusandae, accusamus doloribus. Quas provident
+                culpa minus fuga natus molestiae ducimus labore praesentium id, aspernatur, voluptate modi vel
+                repellendus nisi nam commodi illo! Odit, adipisci saepe architecto exercitationem commodi consequuntur
+                temporibus labore nostrum est aut cumque dolor magnam. Molestias esse dignissimos iure quia vitae
+                quibusdam voluptas quas quo sapiente deserunt iste veniam harum quod magnam, officiis voluptatem iusto!
+                Consectetur mollitia quasi enim tenetur hic voluptas. Minima quia a recusandae adipisci blanditiis
+                placeat eius illum aliquid assumenda vel hic aliquam repellendus officiis tempore deserunt voluptatibus
+                ipsam, sapiente vero nobis earum reprehenderit, doloribus impedit velit culpa. Possimus nesciunt, ex
+                dolor cum optio inventore dolorem animi quae, aliquam pariatur illum in recusandae ea ipsam minus
+                assumenda fugit ducimus officiis! Libero iste cum ab, magni distinctio totam repudiandae exercitationem,
+                officia impedit nam dolore iure, dolor voluptatibus nostrum ut delectus obcaecati similique quae. Eius
+                quaerat eum at totam sunt dolor labore deleniti possimus beatae optio dolores minus corporis, ullam fuga
+                reprehenderit. Maxime veniam qui iusto omnis. Odit nesciunt autem magni atque maxime provident,
+                inventore, facilis pariatur molestias eveniet omnis sunt ad quos iure vitae placeat eius quis quia aut
+                repellendus veniam exercitationem? Distinctio odit adipisci doloremque eos excepturi a inventore soluta
+                unde, tenetur, blanditiis earum suscipit libero sit cumque eaque ex! Optio quaerat quis excepturi
+                tempora nihil nam, quo omnis, repellat repudiandae deleniti iusto labore tenetur quod culpa expedita
+                facere. Consequuntur sequi aperiam obcaecati! Consequuntur qui obcaecati totam. Cumque provident et
+                ullam autem hic eveniet modi. Fuga, veritatis illum quos aliquid iusto sint laboriosam iste ea
+                temporibus totam ipsum aperiam maiores adipisci consequuntur unde a! Beatae commodi ratione fugit.
+                Facilis ab corporis dolores in veniam. Accusamus odit tempore ipsa optio libero est officia eius quidem
+                vitae a, quis officiis tempora harum minima voluptatem ea sit dolore vel explicabo suscipit iure
+                architecto dicta non! Odit itaque magni esse blanditiis perferendis eos numquam minima adipisci ut earum
+                illo amet possimus est distinctio temporibus voluptatibus voluptatum quos placeat laboriosam, a ab fugit
+                provident iste aliquid? Cumque eaque nihil dolorum! Vero consequuntur quam tempore? Pariatur, aliquid
+                voluptatum! Illum mollitia accusamus officiis numquam modi totam pariatur cumque distinctio atque
+                possimus blanditiis voluptatem vitae sequi, fugiat repellat fuga at repellendus, architecto corporis in
+                voluptas? Ipsa laudantium modi, in blanditiis dignissimos adipisci corporis tempora sed. Maxime omnis
+                aliquam tempore maiores repellat ipsa reiciendis molestiae perspiciatis fuga quibusdam? Accusantium,
+                perspiciatis veniam facilis facere voluptas aliquam alias atque quasi voluptatum impedit ducimus optio
+                modi dolorum quo quibusdam tempora. Consequuntur quae tenetur inventore? Et deleniti adipisci
+                praesentium, a sunt numquam natus ullam rem quam quae non repudiandae suscipit, dolores neque dolore.
+                Iste et totam ipsum incidunt dolorum illum praesentium aliquam alias ad, consequatur expedita quas dicta
+                rerum autem eveniet deserunt. Nesciunt, labore consectetur possimus harum voluptatum iste commodi
+                voluptatem ex, facere deserunt quidem? Incidunt saepe unde voluptatem aperiam sunt? Sint error ab
+                cupiditate adipisci dolore quia dignissimos voluptates voluptatem? Quibusdam, adipisci rerum itaque cum
+                magnam beatae libero aut dolorum temporibus. Adipisci eaque eveniet repellat sit? Eius dignissimos,
+                tempore autem possimus dolor ipsam similique sapiente odit omnis, deleniti illum! Ratione officiis
+                praesentium maiores magni neque iste dolorum repudiandae expedita magnam laborum hic similique facilis
+                aliquam fugit quas, in vitae perspiciatis aperiam possimus nobis tempora consequatur. Adipisci rerum
+                possimus, quo deserunt corporis fuga labore temporibus. Corrupti praesentium illum sequi quas eligendi
+                quia sit necessitatibus sunt minima ab libero expedita ratione officiis facilis harum error quasi
+                ducimus, est modi laborum hic doloremque unde impedit. Dolorum maxime accusamus reprehenderit? Et
+                consequuntur nulla repellendus. Assumenda officia mollitia cupiditate dolorum, nisi optio, repudiandae
+                eos saepe suscipit veritatis nobis voluptatum, aliquid dicta? Iure est illum quo reprehenderit
+                laudantium nihil! Repellendus nihil similique animi odit porro autem, explicabo hic. Veniam quis,
+                placeat velit dicta ad beatae, sint deleniti dignissimos mollitia nihil, quibusdam sunt quo neque
+                adipisci quae ipsum! Obcaecati maiores, magni tenetur explicabo odit sequi eveniet debitis? Expedita
+                exercitationem enim quos autem ea, est quaerat nesciunt culpa vel eos qui voluptate quam error, quod
+                saepe officiis. Voluptate iusto est distinctio soluta voluptatem laborum id a, eaque velit libero natus
+                ea. Ipsa harum ipsam alias, quaerat eum cupiditate labore consequuntur molestias odio qui dignissimos
+                exercitationem at inventore reiciendis quas neque officia aperiam quasi. Facere doloremque optio quia
+                assumenda quam dolore autem atque veniam aspernatur totam commodi explicabo laborum consectetur
+                repellendus, quidem, culpa expedita. Quam aut ipsum ratione deleniti molestias odit libero eveniet
+                tempore esse iusto architecto debitis sunt enim sint, velit molestiae nisi minus recusandae rem ipsa
+                laboriosam, iste aliquam reiciendis! Blanditiis exercitationem hic beatae facere mollitia sequi
+                perspiciatis iste ducimus aperiam, fuga molestias veniam a assumenda soluta nostrum inventore! Facere
+                illo fugiat natus reprehenderit, ipsa hic doloremque pariatur accusantium omnis, rerum officiis
+                molestias laborum, expedita doloribus velit vitae sit. Repellat, modi molestias.</p>
+        </div>
+    </div>
+</div>
+<!-- ==================== Dashboard End ==================== -->
+
+<!-- Jquery js -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<!-- Bootstrap Bundle Js -->
+<script src="assets/js/boostrap.bundle.min.js"></script>
+<!-- Slick js -->
+<script src="assets/js/slick.min.js"></script>
+<!-- Select js -->
+<script src="assets/js/select2.min.js"></script>
+<!-- main js -->
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>

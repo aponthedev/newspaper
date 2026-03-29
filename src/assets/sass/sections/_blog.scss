@@ -1,0 +1,103 @@
+/* ================================= Blog Section Css Start Here ============================= */
+.blog-item {
+  box-shadow: var(--box-shadow);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+
+  &:hover {
+    .blog-item {
+      &__thumb {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__thumb {
+    overflow: hidden;
+    border-radius: 8px;
+    max-height: 300px;
+
+    &-link {
+      width: 100%;
+      height: 100%;
+
+      img {
+        transition: 0.2s linear;
+      }
+    }
+  }
+
+  &__content {
+    background-color: hsl(var(--white) / 0.07);
+    padding: 35px 25px;
+    height: 100%;
+
+    @include sm-screen {
+      padding: 30px 20px;
+    }
+
+    @include xsm-screen {
+      padding: 25px 15px;
+    }
+  }
+
+  &__title {
+    margin-top: 20px;
+
+    @include msm-screen {
+      margin-top: 15px;
+    }
+
+    &-link {
+      color: hsl(var(--heading-color));
+      @include line-clamp(2);
+
+      &:hover {
+        color: hsl(var(--base));
+      }
+    }
+  }
+
+  &__desc {
+    margin-bottom: 25px;
+    @include line-clamp(3);
+
+    @include sm-screen {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.btn--simple {
+  color: hsl(var(--body-color));
+
+  &:hover {
+    color: hsl(var(--base));
+  }
+}
+
+/* Text Border Bottom Animation Css Start */
+.border-effect {
+  display: inline !important;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position-y: -2px;
+  background-image: linear-gradient(transparent calc(100% - 1px), currentColor 1px);
+  -webkit-transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background-size: 0 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.border-effect:hover {
+  background-image: linear-gradient(transparent calc(100% - 1px), currentColor 1px);
+  background-size: 100% 100%;
+}
+
+/* Text Border Bottom Animation Css Ends */
+/* ================================= Blog Section Css End Here ================================= */
