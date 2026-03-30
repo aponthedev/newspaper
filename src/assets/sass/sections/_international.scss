@@ -1,0 +1,278 @@
+.international-section {
+  &__heading {
+    text-align: center;
+    margin-bottom: 30px;
+
+    .section-heading__title {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+
+      &::before,
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 240px;
+        height: 2px;
+        background-color: hsl(var(--black) / 0.15);
+      }
+    }
+  }
+}
+
+.international-hero {
+  &__thumb {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 12px;
+
+    img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 0;
+
+    a {
+      color: hsl(var(--heading-color));
+      &:hover {
+        color: hsl(var(--base));
+      }
+    }
+  }
+}
+
+.international-list {
+  display: grid;
+  gap: 12px;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 86px;
+    gap: 12px;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid hsl(var(--black) / 0.12);
+
+    &:last-of-type {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 6px;
+
+    a {
+      color: hsl(var(--heading-color));
+      &:hover {
+        color: hsl(var(--base));
+      }
+    }
+  }
+
+  &__time {
+    font-size: 12px;
+    color: hsl(var(--black) / 0.6);
+  }
+
+  &__thumb {
+    width: 86px;
+    height: 64px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.international-card {
+  &__thumb {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 8px;
+
+    a {
+      color: hsl(var(--heading-color));
+      &:hover {
+        color: hsl(var(--base));
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 160%;
+    color: hsl(var(--black) / 0.75);
+    margin-bottom: 8px;
+  }
+
+  &__time {
+    font-size: 12px;
+    color: hsl(var(--black) / 0.6);
+  }
+}
+
+.international-sidebar {
+  background: hsl(var(--white));
+  border: 1px solid hsl(var(--black) / 0.12);
+  border-radius: 12px;
+  padding: 16px;
+
+  &__header {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 12px;
+    background: hsl(var(--black) / 0.04);
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  &__list {
+    max-height: 380px;
+    overflow-y: auto;
+    padding-right: 6px;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--black) / 0.2) hsl(var(--black) / 0.08);
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: hsl(var(--black) / 0.08);
+      border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: hsl(var(--base));
+      border-radius: 999px;
+      border: 2px solid hsl(var(--black) / 0.08);
+    }
+  }
+
+  &__item {
+    padding: 12px 0;
+    border-bottom: 1px solid hsl(var(--black) / 0.12);
+
+    &:last-of-type {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 14px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 6px;
+      height: 6px;
+      background: #e00000;
+      border-radius: 50%;
+    }
+
+    a {
+      color: hsl(var(--heading-color));
+      &:hover {
+        color: hsl(var(--base));
+      }
+    }
+  }
+
+  &__meta {
+    font-size: 12px;
+    color: hsl(var(--black) / 0.6);
+  }
+}
+
+@include lg-screen {
+  .international-section {
+    &__heading {
+      .section-heading__title {
+        &::before,
+        &::after {
+          width: 170px;
+        }
+      }
+    }
+  }
+}
+
+@include md-screen {
+  .international-hero {
+    &__thumb {
+      img {
+        height: 230px;
+      }
+    }
+  }
+
+  .international-card {
+    &__thumb {
+      img {
+        height: 140px;
+      }
+    }
+  }
+}
+
+@include sm-screen {
+  .international-section {
+    &__heading {
+      text-align: left;
+      .section-heading__title {
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .international-hero {
+    &__thumb {
+      img {
+        height: 210px;
+      }
+    }
+  }
+}

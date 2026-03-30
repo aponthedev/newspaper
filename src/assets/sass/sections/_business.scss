@@ -1,0 +1,23 @@
+/* ======================  Business Section Start  ======================*/
+.business{
+&__item{
+
+    &__thumb{
+        margin-bottom: 16px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__title{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
+}
+/* ======================  Business Section End  ======================*/
