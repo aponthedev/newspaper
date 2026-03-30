@@ -1,73 +1,99 @@
 @@include('../layout/_template-top.html')
 
 <main class="page-wrapper">
-    <section class="account">
-        <div class="account-thumb bg-img" data-background-image="assets/images/thumbs/account-thumb.png"></div>
-        <div class="account-content bg-img" data-background-image="assets/images/thumbs/account-content-overlay.png">
-            <div class="account-header">
-                <a class="account-logo" href="index.html">
-                    <img src="assets/images/logo/logo.png" alt="">
-                </a>
-                <div class="account-heading">
-                    <h2 class="account-heading__title">Welcome Back!</h2>
-                    <p class="account-heading__subtitle">Log in to play, win, and claim rewards.</p>
-                </div>
-            </div>
-
-            <div class="account-body">
-                <div class="social-auth">
-                    <a class="social-auth__btn" href="#">
-                        <img src="assets/images/icons/google.png" alt="">
-                        <span>Login with Google</span>
-                    </a>
-                    <a class="social-auth__btn" href="#">
-                        <img src="assets/images/icons/facebook.png" alt="">
-                        <span>Login with Facebook</span>
-                    </a>
-                    <a class="social-auth__btn" href="#">
-                        <img src="assets/images/icons/linkedin.png" alt="">
-                        <span>Login with Linkedin</span>
-                    </a>
-                </div>
-
-                <div class="account-divider">
-                    <span>Or Login with</span>
-                </div>
-
-                <form class="account-form" action="">
-                    <div class="row gy-4">
-                        <div class="col-sm-12">
-                            <label class="form--label required">Email</label>
-                            <input class="form-control form--control" type="text" placeholder="Enter your email">
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-field form-field--password">
-                                <label class="form--label required">Password</label>
-                                <div class="input-group input--group input--group-password">
-                                    <input class="form-control form--control" type="password" placeholder="Password">
-                                    <span class="input-group-text input-group-btn">
-                                        <i class="far fa-eye-slash"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="account-form__extra">
-                                <div class="form--check">
-                                    <input class="form-check-input" type="checkbox" id="remember-me">
-                                    <label class="form-check-label" for="remember-me">Remember Me</label>
-                                </div>
-                                <a href="#" class="account-form__forgot-link">Forgot Password?</a>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="w-100 btn btn--base mt-4" type="submit">
-                        Login now
-                    </button>
-                </form>
-
-                <p class="account-info">Don't have an account? <a href="registration.html">Create now</a></p>
-            </div>
+  <section class="account">
+    <div
+      class="account-thumb bg-img"
+      data-background-image="assets/images/thumbs/account-thumb.png"
+    ></div>
+    <div
+      class="account-content bg-img"
+      data-background-image="assets/images/thumbs/account-content-overlay.png"
+    >
+      <div class="account-header">
+        <a class="account-logo" href="index.html">
+          <img src="assets/images/logo/logo.png" alt="" />
+        </a>
+        <div class="account-heading">
+          <h2 class="account-heading__title">Welcome Back!</h2>
+          <p class="account-heading__subtitle">
+            Log in to play, win, and claim rewards.
+          </p>
         </div>
-    </section>
+      </div>
+
+      <div class="account-body">
+        <div class="social-auth">
+          <a class="social-auth__btn" href="#">
+            <img src="assets/images/icons/google.png" alt="" />
+            <span>Login with Google</span>
+          </a>
+          <a class="social-auth__btn" href="#">
+            <img src="assets/images/icons/facebook.png" alt="" />
+            <span>Login with Facebook</span>
+          </a>
+          <a class="social-auth__btn" href="#">
+            <img src="assets/images/icons/linkedin.png" alt="" />
+            <span>Login with Linkedin</span>
+          </a>
+        </div>
+
+        <div class="account-divider">
+          <span>Or Login with</span>
+        </div>
+
+        <form class="account-form" action="">
+          <div class="row gy-4">
+            <div class="col-sm-12">
+              <label class="form--label required">Email</label>
+              <input
+                class="form-control form--control"
+                type="text"
+                placeholder="Enter your email"
+              />
+            </div>
+            <div class="col-sm-12">
+              <div class="form-field form-field--password">
+                <label class="form--label required">Password</label>
+                <div class="input-group input--group input--group-password">
+                  <input
+                    class="form-control form--control"
+                    type="password"
+                    placeholder="Password"
+                  />
+                  <span class="input-group-text input-group-btn">
+                    <i class="far fa-eye-slash"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="account-form__extra">
+                <div class="form--check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="remember-me"
+                  />
+                  <label class="form-check-label" for="remember-me"
+                    >Remember Me</label
+                  >
+                </div>
+                <a href="#" class="account-form__forgot-link"
+                  >Forgot Password?</a
+                >
+              </div>
+            </div>
+          </div>
+          <button class="w-100 btn btn--base mt-4" type="submit">
+            Login now
+          </button>
+        </form>
+
+        <p class="account-info">
+          Don't have an account? <a href="registration.html">Create now</a>
+        </p>
+      </div>
+    </div>
+  </section>
 </main>
 
 @@include('../layout/_template-bottom.html')
