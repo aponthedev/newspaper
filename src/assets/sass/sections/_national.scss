@@ -19,7 +19,7 @@
 .national-feature {
   &__thumb {
     display: block;
-    border-radius: 12px;
+   
     overflow: hidden;
     margin-bottom: 14px;
     border: 1px solid hsl(var(--white) / 0.08);
@@ -92,7 +92,7 @@
 
   &__thumb {
     display: block;
-    border-radius: 10px;
+   
     overflow: hidden;
     border: 1px solid hsl(var(--white) / 0.08);
 
@@ -107,7 +107,7 @@
 .national-lead {
   &__thumb {
     display: block;
-    border-radius: 12px;
+    
     overflow: hidden;
     margin-bottom: 14px;
     border: 1px solid hsl(var(--white) / 0.08);

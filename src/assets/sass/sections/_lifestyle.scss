@@ -1,0 +1,273 @@
+/* ======================  Lifestyle Section Start  ======================*/
+.lifestyle-section {
+  background: hsl(var(--white));
+}
+
+.lifestyle-hero {
+  position: relative;
+ 
+  overflow: hidden;
+  height: 100%;
+  min-height: 320px;
+
+  &__thumb {
+    display: block;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      transparent 20%,
+      hsl(var(--black) / 0.55) 100%
+    );
+  }
+
+  &__content {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 16px;
+    z-index: 2;
+    color: hsl(var(--white));
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 150%;
+    font-weight: 700;
+    margin-bottom: 8px;
+
+    a {
+      color: hsl(var(--white));
+      &:hover {
+        color: hsl(var(--base));
+      }
+    }
+  }
+
+  &__date {
+    font-size: 12px;
+    color: hsl(var(--white) / 0.8);
+  }
+}
+
+.lifestyle-feature {
+  &__thumb {
+    display: block;
+   
+    overflow: hidden;
+    margin-bottom: 12px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 10px;
+
+    a {
+      color: hsl(var(--heading-color));
+      &:hover {
+        color: hsl(var(--base));
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 13px;
+    line-height: 165%;
+    color: hsl(var(--black) / 0.7);
+    margin-bottom: 10px;
+  }
+
+  &__date {
+    font-size: 12px;
+    color: hsl(var(--black) / 0.6);
+  }
+}
+
+.lifestyle-card {
+  &__thumb {
+    display: block;
+   
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 8px;
+
+    a {
+      color: hsl(var(--heading-color));
+      &:hover {
+        color: hsl(var(--base));
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 12px;
+    line-height: 165%;
+    color: hsl(var(--black) / 0.65);
+    margin-bottom: 8px;
+  }
+
+  &__date {
+    font-size: 11px;
+    color: hsl(var(--black) / 0.55);
+  }
+}
+
+.lifestyle-sidebar {
+  border-left: 1px solid hsl(var(--black) / 0.1);
+  padding-left: 18px;
+
+  &__ad {
+    height: 160px;
+    
+    background: hsl(var(--black) / 0.05);
+    margin-bottom: 18px;
+  }
+
+  &__list {
+    display: none;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  &__list.is-active {
+    display: grid;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid hsl(var(--black) / 0.1);
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__index {
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(var(--base));
+    line-height: 1;
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 160%;
+    font-weight: 600;
+    color: hsl(var(--heading-color));
+
+    &:hover {
+      color: hsl(var(--base));
+    }
+  }
+
+  &__dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: hsl(var(--base));
+    margin-right: 6px;
+    transform: translateY(1px);
+  }
+
+  &__tag {
+    color: hsl(var(--base));
+    font-weight: 700;
+    margin-right: 6px;
+  }
+}
+
+.lifestyle-tabs {
+  display: flex;
+  gap: 20px;
+  border-bottom: 2px solid hsl(var(--black) / 0.15);
+  padding-bottom: 8px;
+
+  &__btn {
+    background: none;
+    border: 0;
+    padding: 0 0 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: hsl(var(--black) / 0.7);
+    position: relative;
+    cursor: pointer;
+
+    &.is-active {
+      color: hsl(var(--heading-color));
+    }
+
+    &.is-active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      height: 2px;
+      background: hsl(var(--base));
+    }
+  }
+}
+
+@include lg-screen {
+  .lifestyle-hero {
+    min-height: 280px;
+  }
+
+  .lifestyle-sidebar {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+@include md-screen {
+  .lifestyle-hero {
+    min-height: 260px;
+  }
+}
+
+@include sm-screen {
+  .lifestyle-hero {
+    min-height: 240px;
+  }
+
+  .lifestyle-sidebar__ad {
+    height: 140px;
+  }
+}
+/* ======================  Lifestyle Section End  ======================*/

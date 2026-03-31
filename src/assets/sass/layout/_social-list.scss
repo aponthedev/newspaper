@@ -20,8 +20,11 @@
     overflow: hidden;
     transition: .3s;
     cursor: pointer;
-    color: hsl(var(--white));
-    background-color: hsl(var(--white)/.15);
+    color: hsl(var(--base));
+    background-color: hsl(var(--black)/.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &.active,
     &:hover,

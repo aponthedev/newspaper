@@ -89,7 +89,7 @@ color: hsl(var(--base));
         width: 100%;
         overflow: hidden;
         display: block;
-        border-radius: 12px;
+       
 
         img {
             width: 100%;
@@ -122,7 +122,7 @@ color: hsl(var(--base));
 }
 
 .top-stories__ad {
-    border-radius: 14px;
+  
     overflow: hidden;
     border: 1px solid hsl(var(--black) / 0.08);
     box-shadow: 0 12px 24px hsl(var(--black) / 0.06);
@@ -159,8 +159,7 @@ color: hsl(var(--base));
 
 .top-stories__feature-thumb {
     width: 58px;
-    height: 58px;
-    border-radius: 10px;
+    height: 58px;    
     overflow: hidden;
 
     img {

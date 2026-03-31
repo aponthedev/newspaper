@@ -184,6 +184,41 @@ $('.editorial__slider').slick({
         });
         /* ==================== Select2 Initialization JS End ==================== */
 
+        /* ==================== Lifestyle Tabs JS Start ==================== */
+        $('.lifestyle-tabs').each(function (index, tabs) {
+            let tabWrapper = $(tabs);
+            let buttons = tabWrapper.find('.lifestyle-tabs__btn');
+            let sidebar = tabWrapper.closest('.lifestyle-sidebar');
+            let lists = sidebar.find('.lifestyle-sidebar__list');
+
+            function activateTab(target) {
+                buttons.removeClass('is-active').attr('aria-selected', 'false');
+                buttons
+                    .filter(`[data-tab-target="${target}"]`)
+                    .addClass('is-active')
+                    .attr('aria-selected', 'true');
+
+                lists.removeClass('is-active').attr('aria-hidden', 'true');
+                lists
+                    .filter(`[data-tab="${target}"]`)
+                    .addClass('is-active')
+                    .attr('aria-hidden', 'false');
+            }
+
+            let initialTarget =
+                buttons.filter('.is-active').data('tab-target') ||
+                buttons.first().data('tab-target');
+
+            if (initialTarget) {
+                activateTab(initialTarget);
+            }
+
+            buttons.on('click', function () {
+                activateTab($(this).data('tab-target'));
+            });
+        });
+        /* ==================== Lifestyle Tabs JS End ==================== */
+
         /* ==================== Slick Slider Initialization JS Start ==================== */
         const sliderConfig = {
             slidesToScroll: 1,

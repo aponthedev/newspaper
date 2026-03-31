@@ -24,7 +24,7 @@
 .international-hero {
   &__thumb {
     display: block;
-    border-radius: 12px;
+    
     overflow: hidden;
     margin-bottom: 12px;
 
@@ -90,7 +90,7 @@
   &__thumb {
     width: 86px;
     height: 64px;
-    border-radius: 8px;
+   
     overflow: hidden;
 
     img {
@@ -104,7 +104,7 @@
 .international-card {
   &__thumb {
     display: block;
-    border-radius: 10px;
+    
     overflow: hidden;
     margin-bottom: 10px;
 
@@ -154,7 +154,7 @@
     font-weight: 700;
     padding: 10px 12px;
     background: hsl(var(--black) / 0.04);
-    border-radius: 8px;
+   
     margin-bottom: 12px;
   }
 
@@ -207,7 +207,7 @@
       width: 6px;
       height: 6px;
       background: #e00000;
-      border-radius: 50%;
+     
     }
 
     a {

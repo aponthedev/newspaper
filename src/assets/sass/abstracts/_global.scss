@@ -116,6 +116,15 @@
 }
 
 /* ========================= Globale CSS End ========================= */
+.border-left{
+  border-left: 1px solid hsl(var(--black) / 0.2);
+}
+.border-right{
+  border-right: 1px solid hsl(var(--black) / 0.2);
+}
+.border-bottom{
+  border-bottom: 1px solid hsl(var(--black) / 0.2);
+}
 
 /* Global image hover (exclude logos) */
 img {
